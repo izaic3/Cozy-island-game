@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Island Drift</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-day">
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">A cozy drifting survival story</p>
+      <h1>Cozy Island Drift</h1>
+      <p class="subtitle">
+        You are adrift on a tiny 5x5 island. Fish, gather, and keep warm while the sea
+        carries you toward new shores.
+      </p>
+    </div>
+    <div class="day-cycle">
+      <div class="sky">
+        <div class="sun"></div>
+        <div class="stars"></div>
+      </div>
+      <p class="cycle-label">Day 1 &middot; Sunset in 3 steps</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="island-card">
+      <div class="island-grid" aria-label="5 by 5 island tiles"></div>
+      <div class="island-info">
+        <h2>Your drifting island</h2>
+        <p>
+          A square raft of earth and palms, 25 tiles of cozy calm. Trees grow on the
+          greener edges, the center is yours to shape.
+        </p>
+        <ul>
+          <li><strong>Actions:</strong> Fish &amp; Chop Trees</li>
+          <li><strong>Crafting:</strong> Firepit, Small Hut</li>
+          <li><strong>Goal:</strong> Reach the next island as the seas connect.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="actions">
+      <div class="action-panel">
+        <h3>Gather &amp; Build</h3>
+        <p class="hint">Start by fishing or chopping. Use gathered wood to craft a fire or hut.</p>
+        <div class="button-row">
+          <button type="button" data-action="fish">Fish</button>
+          <button type="button" data-action="chop">Chop Tree</button>
+          <button type="button" data-action="fire">Make Fire</button>
+          <button type="button" data-action="hut">Build Hut</button>
+        </div>
+        <div class="resources">
+          <div><span>Fish:</span> <strong id="fish-count">0</strong></div>
+          <div><span>Wood:</span> <strong id="wood-count">0</strong></div>
+          <div><span>Warmth:</span> <strong id="warmth-count">0</strong></div>
+        </div>
+      </div>
+      <div class="story-panel">
+        <h3>Drift Log</h3>
+        <p id="story">The tide is gentle. The sun warms your shoulders.</p>
+        <p class="time-status" id="time-status">Golden hour keeps the island bright.</p>
+      </div>
+    </section>
+
+    <section class="merge-panel">
+      <h2>Horizon Watch</h2>
+      <p>
+        Each day brings a new view. When the sun rises on Day 4, your island kisses
+        another, unlocking new paths and resources.
+      </p>
+      <div class="progress">
+        <div class="progress-bar" id="merge-progress"></div>
+      </div>
+      <p id="merge-text">Distance to the next island: Far away.</p>
+    </section>
+
+    <section class="explore-panel" id="explore-panel" aria-live="polite">
+      <h2>New Shores</h2>
+      <p>
+        The islands meet, forming a wider land bridge. You can now explore fresh trees,
+        driftwood caches, and quiet lagoons to the east.
+      </p>
+      <div class="explore-grid" aria-label="Newly connected island tiles"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Cozy Island Drift &middot; Keep the fire warm, keep the hope warm.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
